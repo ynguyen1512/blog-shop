@@ -1,12 +1,12 @@
-import type React from "react"
+import Footer from "@/components/footer"
+import Header from "@/components/header"
+import { ThemeProvider } from "@/components/theme-provider"
+import { Toaster } from "@/components/ui/toaster"
+import { CartProvider } from "@/context/cart-context"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import type React from "react"
 import "./globals.css"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
-import { ThemeProvider } from "@/components/theme-provider"
-import { CartProvider } from "@/context/cart-context"
-import { Toaster } from "@/components/ui/toaster"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: "ShopSage | Retail Wisdom & Curated Products",
   description:
     "Expert insights, industry trends, and carefully selected products to elevate your online shopping experience.",
-    generator: 'v0.dev'
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -22,6 +22,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+
+
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -40,5 +42,3 @@ export default function RootLayout({
   )
 }
 
-
-import './globals.css'

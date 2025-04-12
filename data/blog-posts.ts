@@ -1,3 +1,19 @@
+import ai from '../public/images/ai.jpg'
+import behavior from '../public/images/behavior.webp'
+import revenue from '../public/images/builindg-revenue.webp'
+import crossBorder from '../public/images/cross-border.png'
+import trend from '../public/images/e-commerce-trend.png'
+import sale from '../public/images/increase-sale.png'
+import increaseShopping from '../public/images/increase-shopping.jpg'
+import mobile from '../public/images/mobile-first.webp'
+import optimize from '../public/images/optimize-product.jpeg'
+import riseEcommerce from '../public/images/rise-ecommerce.png'
+import seo from '../public/images/seo.jpg'
+import strategy from '../public/images/strategy.webp'
+import sus from '../public/images/sustainable.webp'
+import transforming from '../public/images/transforming.webp'
+import voice from '../public/images/voice.webp'
+
 export const allPosts = [
   {
     id: 1,
@@ -7,7 +23,7 @@ export const allPosts = [
       "Discover the latest trends that are shaping the future of online retail and how to stay ahead of the competition.",
     date: "June 12, 2023",
     category: "Trends",
-    image: "/placeholder.svg?height=400&width=600",
+    image: trend
   },
   {
     id: 2,
@@ -17,7 +33,7 @@ export const allPosts = [
       "Learn the key elements of high-converting product pages and actionable tips to implement them on your store.",
     date: "May 28, 2023",
     category: "Guides",
-    image: "/placeholder.svg?height=400&width=600",
+    image: optimize
   },
   {
     id: 3,
@@ -27,7 +43,7 @@ export const allPosts = [
       "Explore strategies for creating an environmentally conscious online store that resonates with modern consumers.",
     date: "May 15, 2023",
     category: "Trends",
-    image: "/placeholder.svg?height=400&width=600",
+    image: sus
   },
   {
     id: 4,
@@ -36,7 +52,7 @@ export const allPosts = [
     excerpt: "A detailed case study on how we optimized the user experience and checkout process to boost sales.",
     date: "May 5, 2023",
     category: "Case Studies",
-    image: "/placeholder.svg?height=400&width=600",
+    image: increaseShopping
   },
   {
     id: 5,
@@ -46,7 +62,7 @@ export const allPosts = [
       "Everything you need to know about optimizing your online store for search engines to drive organic traffic.",
     date: "April 22, 2023",
     category: "Guides",
-    image: "/placeholder.svg?height=400&width=600",
+    image: seo
   },
   {
     id: 6,
@@ -56,7 +72,7 @@ export const allPosts = [
       "Learn how to create email campaigns that drive sales, build customer loyalty, and increase lifetime value.",
     date: "April 10, 2023",
     category: "Guides",
-    image: "/placeholder.svg?height=400&width=600",
+    image: strategy
   },
   {
     id: 7,
@@ -65,7 +81,7 @@ export const allPosts = [
     excerpt: "A comprehensive guide to leveraging social media platforms as direct sales channels for your products.",
     date: "March 28, 2023",
     category: "Trends",
-    image: "/placeholder.svg?height=400&width=600",
+    image: riseEcommerce
   },
   {
     id: 8,
@@ -74,7 +90,7 @@ export const allPosts = [
     excerpt: "Best practices for creating a seamless shopping experience for the growing number of mobile shoppers.",
     date: "March 15, 2023",
     category: "Guides",
-    image: "/placeholder.svg?height=400&width=600",
+    image: mobile,
   },
   {
     id: 9,
@@ -84,7 +100,7 @@ export const allPosts = [
       "A case study exploring the strategies we implemented to help a local retailer thrive in the digital marketplace.",
     date: "March 3, 2023",
     category: "Case Studies",
-    image: "/placeholder.svg?height=400&width=600",
+    image: sale
   },
   {
     id: 10,
@@ -94,7 +110,7 @@ export const allPosts = [
       "Insights into the psychological factors that influence online shopping decisions and how to leverage them.",
     date: "February 20, 2023",
     category: "Guides",
-    image: "/placeholder.svg?height=400&width=600",
+    image: behavior
   },
   {
     id: 11,
@@ -104,7 +120,7 @@ export const allPosts = [
       "Exploring how AI is transforming the retail landscape and what innovations we can expect in the coming years.",
     date: "February 8, 2023",
     category: "Trends",
-    image: "/placeholder.svg?height=400&width=600",
+    image: ai
   },
   {
     id: 12,
@@ -114,7 +130,7 @@ export const allPosts = [
       "A guide to implementing subscription services to create predictable income and increase customer lifetime value.",
     date: "January 25, 2023",
     category: "Guides",
-    image: "/placeholder.svg?height=400&width=600",
+    image: revenue
   },
   {
     id: 13,
@@ -124,7 +140,7 @@ export const allPosts = [
       "How we helped a 50-year-old brick-and-mortar business successfully transition to the digital marketplace.",
     date: "January 12, 2023",
     category: "Case Studies",
-    image: "/placeholder.svg?height=400&width=600",
+    image: transforming
   },
   {
     id: 14,
@@ -133,7 +149,7 @@ export const allPosts = [
     excerpt: "Strategies for optimizing your e-commerce business for voice search and smart speaker shopping.",
     date: "January 5, 2023",
     category: "Trends",
-    image: "/placeholder.svg?height=400&width=600",
+    image: voice
   },
   {
     id: 15,
@@ -143,7 +159,7 @@ export const allPosts = [
       "A comprehensive guide to international selling, including logistics, payment methods, and cultural considerations.",
     date: "December 20, 2022",
     category: "Guides",
-    image: "/placeholder.svg?height=400&width=600",
+    image: crossBorder
   },
 ]
 

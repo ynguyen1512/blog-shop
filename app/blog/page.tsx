@@ -1,15 +1,25 @@
 "use client"
 
-import { useState } from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { ArrowRight } from "lucide-react"
-
+import { Container } from "@/components/container"
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Container } from "@/components/container"
-
+import { ArrowRight } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+import { useState } from "react"
+import ai from '../../public/images/ai.jpg'
+import behavior from '../../public/images/behavior.webp'
+import buildingRevenue from '../../public/images/builindg-revenue.webp'
+import trends from '../../public/images/e-commerce-trend.png'
+import increaseSale from '../../public/images/increase-sale.png'
+import increaseShopping from '../../public/images/increase-shopping.jpg'
+import mobileFirst from '../../public/images/mobile-first.webp'
+import optimize from '../../public/images/optimize-product.jpeg'
+import riseEcommerce from '../../public/images/rise-ecommerce.png'
+import seo from '../../public/images/seo.jpg'
+import strategy from '../../public/images/strategy.webp'
+import sustainable from '../../public/images/sustainable.webp'
 export default function BlogPage() {
   const ITEMS_PER_PAGE = 6
   const [visiblePosts, setVisiblePosts] = useState(ITEMS_PER_PAGE)
@@ -239,7 +249,7 @@ const allPosts = [
       "Discover the latest trends that are shaping the future of online retail and how to stay ahead of the competition.",
     date: "June 12, 2023",
     category: "Trends",
-    image: "/placeholder.svg?height=400&width=600",
+    image: trends
   },
   {
     id: 2,
@@ -249,7 +259,7 @@ const allPosts = [
       "Learn the key elements of high-converting product pages and actionable tips to implement them on your store.",
     date: "May 28, 2023",
     category: "Guides",
-    image: "/placeholder.svg?height=400&width=600",
+    image: optimize,
   },
   {
     id: 3,
@@ -259,7 +269,7 @@ const allPosts = [
       "Explore strategies for creating an environmentally conscious online store that resonates with modern consumers.",
     date: "May 15, 2023",
     category: "Trends",
-    image: "/placeholder.svg?height=400&width=600",
+    image: sustainable
   },
   {
     id: 4,
@@ -268,7 +278,7 @@ const allPosts = [
     excerpt: "A detailed case study on how we optimized the user experience and checkout process to boost sales.",
     date: "May 5, 2023",
     category: "Case Studies",
-    image: "/placeholder.svg?height=400&width=600",
+    image: increaseShopping
   },
   {
     id: 5,
@@ -278,7 +288,7 @@ const allPosts = [
       "Everything you need to know about optimizing your online store for search engines to drive organic traffic.",
     date: "April 22, 2023",
     category: "Guides",
-    image: "/placeholder.svg?height=400&width=600",
+    image: seo,
   },
   {
     id: 6,
@@ -288,7 +298,7 @@ const allPosts = [
       "Learn how to create email campaigns that drive sales, build customer loyalty, and increase lifetime value.",
     date: "April 10, 2023",
     category: "Guides",
-    image: "/placeholder.svg?height=400&width=600",
+    image: strategy
   },
   {
     id: 7,
@@ -297,7 +307,7 @@ const allPosts = [
     excerpt: "A comprehensive guide to leveraging social media platforms as direct sales channels for your products.",
     date: "March 28, 2023",
     category: "Trends",
-    image: "/placeholder.svg?height=400&width=600",
+    image: riseEcommerce
   },
   {
     id: 8,
@@ -306,7 +316,7 @@ const allPosts = [
     excerpt: "Best practices for creating a seamless shopping experience for the growing number of mobile shoppers.",
     date: "March 15, 2023",
     category: "Guides",
-    image: "/placeholder.svg?height=400&width=600",
+    image: mobileFirst
   },
   {
     id: 9,
@@ -316,7 +326,7 @@ const allPosts = [
       "A case study exploring the strategies we implemented to help a local retailer thrive in the digital marketplace.",
     date: "March 3, 2023",
     category: "Case Studies",
-    image: "/placeholder.svg?height=400&width=600",
+    image: increaseSale
   },
   {
     id: 10,
@@ -326,7 +336,7 @@ const allPosts = [
       "Insights into the psychological factors that influence online shopping decisions and how to leverage them.",
     date: "February 20, 2023",
     category: "Guides",
-    image: "/placeholder.svg?height=400&width=600",
+    image: behavior
   },
   {
     id: 11,
@@ -336,7 +346,7 @@ const allPosts = [
       "Exploring how AI is transforming the retail landscape and what innovations we can expect in the coming years.",
     date: "February 8, 2023",
     category: "Trends",
-    image: "/placeholder.svg?height=400&width=600",
+    image: ai
   },
   {
     id: 12,
@@ -346,35 +356,6 @@ const allPosts = [
       "A guide to implementing subscription services to create predictable income and increase customer lifetime value.",
     date: "January 25, 2023",
     category: "Guides",
-    image: "/placeholder.svg?height=400&width=600",
-  },
-  {
-    id: 13,
-    title: "Transforming a Traditional Retailer into an E-commerce Success Story",
-    slug: "traditional-retailer-ecommerce-transformation",
-    excerpt:
-      "How we helped a 50-year-old brick-and-mortar business successfully transition to the digital marketplace.",
-    date: "January 12, 2023",
-    category: "Case Studies",
-    image: "/placeholder.svg?height=400&width=600",
-  },
-  {
-    id: 14,
-    title: "Voice Commerce: Preparing Your Store for the Audio Shopping Revolution",
-    slug: "voice-commerce-audio-shopping",
-    excerpt: "Strategies for optimizing your e-commerce business for voice search and smart speaker shopping.",
-    date: "January 5, 2023",
-    category: "Trends",
-    image: "/placeholder.svg?height=400&width=600",
-  },
-  {
-    id: 15,
-    title: "Cross-Border E-commerce: Expanding Your Business Globally",
-    slug: "cross-border-ecommerce-global-expansion",
-    excerpt:
-      "A comprehensive guide to international selling, including logistics, payment methods, and cultural considerations.",
-    date: "December 20, 2022",
-    category: "Guides",
-    image: "/placeholder.svg?height=400&width=600",
+    image: buildingRevenue
   },
 ]

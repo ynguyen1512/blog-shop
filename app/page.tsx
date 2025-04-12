@@ -1,10 +1,16 @@
-import Link from "next/link"
-import Image from "next/image"
-import { ArrowRight, ShoppingBag } from "lucide-react"
-
+import { Container } from "@/components/container"
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Container } from "@/components/container"
+import { ArrowRight, ShoppingBag } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+import bottle from '../public/images/bottle.jpg'
+import trends from '../public/images/e-commerce-trend.png'
+import headphone from '../public/images/headphone.webp'
+import heroImg from '../public/images/hero-img.avif'
+import optimizeImg from '../public/images/optimize-product.jpeg'
+import sustainable from '../public/images/sustainable.webp'
+import tShirt from '../public/images/tshirt.jpg'
 
 export default function Home() {
   return (
@@ -41,7 +47,7 @@ export default function Home() {
                 alt="E-commerce blog hero image"
                 className="mx-auto aspect-video overflow-hidden rounded-xl object-cover"
                 height={400}
-                src="/placeholder.svg?height=400&width=800"
+                src={heroImg}
                 width={800}
               />
             </div>
@@ -196,7 +202,7 @@ const featuredPosts = [
       "Discover the latest trends that are shaping the future of online retail and how to stay ahead of the competition.",
     date: "June 12, 2023",
     category: "Trends",
-    image: "/placeholder.svg?height=400&width=600",
+    image: trends,
   },
   {
     id: 2,
@@ -206,7 +212,7 @@ const featuredPosts = [
       "Learn the key elements of high-converting product pages and actionable tips to implement them on your store.",
     date: "May 28, 2023",
     category: "Conversion",
-    image: "/placeholder.svg?height=400&width=600",
+    image: optimizeImg,
   },
   {
     id: 3,
@@ -216,7 +222,7 @@ const featuredPosts = [
       "Explore strategies for creating an environmentally conscious online store that resonates with modern consumers.",
     date: "May 15, 2023",
     category: "Sustainability",
-    image: "/placeholder.svg?height=400&width=600",
+    image: sustainable
   },
 ]
 
@@ -227,7 +233,7 @@ const trendingProducts = [
     slug: "eco-friendly-water-bottle",
     description: "Sustainable, BPA-free water bottle made from recycled materials.",
     price: 24.99,
-    image: "/placeholder.svg?height=400&width=400",
+    image: bottle
   },
   {
     id: 2,
@@ -235,7 +241,7 @@ const trendingProducts = [
     slug: "wireless-noise-cancelling-headphones",
     description: "Premium sound quality with active noise cancellation technology.",
     price: 149.99,
-    image: "/placeholder.svg?height=400&width=400",
+    image: headphone
   },
   {
     id: 3,
@@ -243,6 +249,6 @@ const trendingProducts = [
     slug: "organic-cotton-tshirt",
     description: "Soft, comfortable t-shirt made from 100% organic cotton.",
     price: 29.99,
-    image: "/placeholder.svg?height=400&width=400",
+    image: tShirt
   },
 ]

@@ -2,18 +2,18 @@
 
 import type React from "react"
 
-import Link from "next/link"
-import { useState, useEffect, useRef } from "react"
 import { Menu, Search, ShoppingCart, X } from "lucide-react"
+import Link from "next/link"
 import { useRouter } from "next/navigation"
+import { useEffect, useRef, useState } from "react"
 
+import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { useCart } from "@/context/cart-context"
 import { usePathname } from "next/navigation"
 import Logo from "./logo"
-import { useCart } from "@/context/cart-context"
-import { Badge } from "@/components/ui/badge"
 
 // Mock data for search
 import { allPosts } from "@/data/blog-posts"
@@ -100,14 +100,13 @@ export default function Header() {
           <div className="mx-auto flex h-16 max-w-6xl items-center justify-between">
             <div className="flex gap-6 md:gap-10">
               <Logo />
-              <nav className="hidden gap-6 md:flex">
+              <nav className="hidden gap-6 md:flex items-center">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
-                    className={`text-sm font-medium transition-colors hover:text-primary ${
-                      pathname === item.href ? "text-primary" : "text-muted-foreground"
-                    }`}
+                    className={`text-sm font-medium transition-colors hover:text-primary ${pathname === item.href ? "text-primary" : "text-muted-foreground"
+                      }`}
                   >
                     {item.name}
                   </Link>
@@ -162,7 +161,7 @@ export default function Header() {
                       ))}
                       <div
                         className="p-2 text-center text-sm text-primary hover:underline cursor-pointer"
-                        onClick={() => handleSearchSubmit({ preventDefault: () => {} } as any)}
+                        onClick={() => handleSearchSubmit({ preventDefault: () => { } } as any)}
                       >
                         View all results
                       </div>
@@ -201,9 +200,8 @@ export default function Header() {
                       <Link
                         key={item.name}
                         href={item.href}
-                        className={`hover:text-primary ${
-                          pathname === item.href ? "text-primary" : "text-muted-foreground"
-                        }`}
+                        className={`hover:text-primary ${pathname === item.href ? "text-primary" : "text-muted-foreground"
+                          }`}
                       >
                         {item.name}
                       </Link>

@@ -1,13 +1,13 @@
 "use client"
 
+import { ArrowLeft, Calendar, User } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLeft, Calendar, User } from "lucide-react"
 import { useEffect, useRef } from "react"
 
+import { Container } from "@/components/container"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Container } from "@/components/container"
 import { getPostBySlug, getRelatedPosts } from "@/data/blog-posts"
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {

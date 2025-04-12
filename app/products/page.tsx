@@ -1,10 +1,12 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import Image from "next/image"
 import { Filter, ShoppingBag, X } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+import { useEffect, useState } from "react"
 
+import { Container } from "@/components/container"
+import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Checkbox } from "@/components/ui/checkbox"
@@ -13,8 +15,17 @@ import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Separator } from "@/components/ui/separator"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
-import { Container } from "@/components/container"
-import { Badge } from "@/components/ui/badge"
+import bottle from '../../public/images/bottle.jpg'
+import camera from '../../public/images/camera.webp'
+import cuttingBoard from '../../public/images/cutting-board.jpeg'
+import headphone from '../../public/images/headphone.webp'
+import organic from '../../public/images/organic.avif'
+import serum from '../../public/images/serum.webp'
+import smartTracker from '../../public/images/smart-tracker.webp'
+import speaker from '../../public/images/speaker.webp'
+import tShirt from '../../public/images/tshirt.jpg'
+import wallet from '../../public/images/wallet.jpg'
+import yogaMat from '../../public/images/yoga-mat.jpg'
 
 const categories = [
   { id: 1, name: "Electronics" },
@@ -40,7 +51,7 @@ const products = [
     description: "Sustainable, BPA-free water bottle made from recycled materials.",
     price: 24.99,
     category: "Home & Living",
-    image: "/placeholder.svg?height=400&width=400",
+    image: bottle
   },
   {
     id: 2,
@@ -49,7 +60,7 @@ const products = [
     description: "Premium sound quality with active noise cancellation technology.",
     price: 149.99,
     category: "Electronics",
-    image: "/placeholder.svg?height=400&width=400",
+    image: headphone
   },
   {
     id: 3,
@@ -58,7 +69,7 @@ const products = [
     description: "Soft, comfortable t-shirt made from 100% organic cotton.",
     price: 29.99,
     category: "Clothing",
-    image: "/placeholder.svg?height=400&width=400",
+    image: tShirt
   },
   {
     id: 4,
@@ -67,7 +78,7 @@ const products = [
     description: "Track your workouts, heart rate, sleep, and more with this advanced fitness wearable.",
     price: 89.99,
     category: "Electronics",
-    image: "/placeholder.svg?height=400&width=400",
+    image: smartTracker
   },
   {
     id: 5,
@@ -76,7 +87,7 @@ const products = [
     description: "Durable, eco-friendly bamboo cutting boards in three convenient sizes.",
     price: 34.99,
     category: "Home & Living",
-    image: "/placeholder.svg?height=400&width=400",
+    image: cuttingBoard
   },
   {
     id: 6,
@@ -85,7 +96,7 @@ const products = [
     description: "Hydrating face serum with natural ingredients for all skin types.",
     price: 45.99,
     category: "Beauty & Personal Care",
-    image: "/placeholder.svg?height=400&width=400",
+    image: serum
   },
   {
     id: 7,
@@ -94,7 +105,7 @@ const products = [
     description: "Non-slip, eco-friendly yoga mat perfect for all types of yoga practices.",
     price: 39.99,
     category: "Sports & Outdoors",
-    image: "/placeholder.svg?height=400&width=400",
+    image: yogaMat
   },
   {
     id: 8,
@@ -103,7 +114,7 @@ const products = [
     description: "Waterproof, durable speaker with amazing sound quality for outdoor adventures.",
     price: 79.99,
     category: "Electronics",
-    image: "/placeholder.svg?height=400&width=400",
+    image: speaker
   },
   {
     id: 9,
@@ -112,7 +123,7 @@ const products = [
     description: "Slim, RFID-blocking wallet that holds all your essentials without the bulk.",
     price: 19.99,
     category: "Clothing",
-    image: "/placeholder.svg?height=400&width=400",
+    image: wallet
   },
   {
     id: 10,
@@ -121,7 +132,7 @@ const products = [
     description: "HD security camera with motion detection, night vision, and smartphone alerts.",
     price: 129.99,
     category: "Electronics",
-    image: "/placeholder.svg?height=400&width=400",
+    image: camera
   },
   {
     id: 11,
@@ -130,43 +141,7 @@ const products = [
     description: "Complete skincare routine with natural, cruelty-free ingredients for all skin types.",
     price: 89.99,
     category: "Beauty & Personal Care",
-    image: "/placeholder.svg?height=400&width=400",
-  },
-  {
-    id: 12,
-    name: "Adjustable Dumbbell Set",
-    slug: "adjustable-dumbbell-set",
-    description: "Space-saving adjustable dumbbells perfect for home workouts and strength training.",
-    price: 199.99,
-    category: "Sports & Outdoors",
-    image: "/placeholder.svg?height=400&width=400",
-  },
-  {
-    id: 13,
-    name: "Ceramic Coffee Mug Set",
-    slug: "ceramic-coffee-mug-set",
-    description: "Set of 4 handcrafted ceramic mugs in modern, minimalist design.",
-    price: 49.99,
-    category: "Home & Living",
-    image: "/placeholder.svg?height=400&width=400",
-  },
-  {
-    id: 14,
-    name: "Linen Bedding Set",
-    slug: "linen-bedding-set",
-    description: "Luxurious, breathable 100% linen bedding for a comfortable night's sleep.",
-    price: 159.99,
-    category: "Home & Living",
-    image: "/placeholder.svg?height=400&width=400",
-  },
-  {
-    id: 15,
-    name: "Wireless Earbuds",
-    slug: "wireless-earbuds",
-    description: "Premium sound quality with long battery life and comfortable fit for all-day wear.",
-    price: 99.99,
-    category: "Electronics",
-    image: "/placeholder.svg?height=400&width=400",
+    image: organic
   },
 ]
 

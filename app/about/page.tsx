@@ -1,11 +1,12 @@
+import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
 
+import { Container } from "@/components/container"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
-import { Container } from "@/components/container"
+import ourStory from '../../public/images/our-story.jpg'
 
 export default function AboutPage() {
   return (
@@ -22,7 +23,7 @@ export default function AboutPage() {
       <div className="mt-16 grid gap-8 md:grid-cols-2 md:gap-16 items-center">
         <div>
           <Image
-            src="/placeholder.svg?height=600&width=600"
+            src={ourStory}
             alt="ShopSage team working together"
             width={600}
             height={600}
@@ -71,7 +72,7 @@ export default function AboutPage() {
       <Separator className="my-16" />
 
       {/* Team Section */}
-      <div className="space-y-8">
+      {/* <div className="space-y-8">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="text-2xl font-bold">Meet Our Team</h2>
           <p className="mt-2 text-muted-foreground">The experts behind ShopSage</p>
@@ -94,12 +95,11 @@ export default function AboutPage() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
-      <Separator className="my-16" />
 
       {/* Partners Section */}
-      <div className="space-y-8">
+      {/* <div className="space-y-8">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="text-2xl font-bold">Our Partners</h2>
           <p className="mt-2 text-muted-foreground">Trusted brands we work with</p>
@@ -118,7 +118,7 @@ export default function AboutPage() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* CTA Section */}
       <div className="mt-20 rounded-lg bg-gradient-to-r from-teal-50 to-emerald-50 p-8 dark:from-gray-900 dark:to-gray-800">
@@ -147,7 +147,7 @@ export default function AboutPage() {
 }
 
 // Sample data
-import { Lightbulb, Shield, Zap, BarChart, Users, Heart } from "lucide-react"
+import { BarChart, Heart, Lightbulb, Shield, Users, Zap } from "lucide-react"
 
 const values = [
   {
